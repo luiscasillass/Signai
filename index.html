@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signai - Gestión Inteligente de Documentos</title>
+  <meta name="description" content="Signai es una plataforma All-in-One para la gestión inteligente de documentos. Edición, firma y almacenamiento en una sola plataforma.">
+  <!-- Integración de Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXXX-X');
+  </script>
+  <!-- Iconos (Font Awesome) y Google Fonts -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7y7eFAhHe+qgOAt/6DhmdVV3MxEd/ABiLa/" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ===============================
+       Estilos Globales
+    =============================== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f4f7fa;
+      color: #333;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    /* Contenedor Principal */
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    /* ===============================
+       Hero Section (Encabezado)
+    =============================== */
+    #hero {
+      background: linear-gradient(135deg, #001f3f, #004080);
+      color: #fff;
+      padding: 100px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    #hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+    #hero p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+    }
+    .btn-primary {
+      background-color: #ff5722;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .btn-primary:hover {
+      background-color: #e64a19;
+    }
+    #hero .hero-image {
+      margin-top: 40px;
+      max-width: 800px;
+      width: 100%;
+      animation: float 6s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-20px); }
+      100% { transform: translateY(0px); }
+    }
+    
+    /* ===============================
+       Beneficios Clave
+    =============================== */
+    #benefits {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+    #benefits .benefits-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    #benefits .benefit-item i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    #benefits .benefit-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    #benefits .benefit-item p {
+      font-size: 1rem;
+      color: #666;
+    }
+    
+    /* ===============================
+       Casos de Uso
+    =============================== */
+    #casos-de-uso {
+      padding: 60px 0;
+      background-color: #f9fbfd;
+    }
+    #casos-de-uso h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #001f3f;
+    }
+    #casos-de-uso .casos-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+    #casos-de-uso .caso {
+      background: #fff;
+      border: 1px solid #e0e0e0;
+      border-radius: 10px;
+      padding: 20px 30px;
+      font-size: 1rem;
+      color: #333;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      min-width: 200px;
+    }
+    #casos-de-uso .caso:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    
+    /* ===============================
+       Testimonios y Confianza
+    =============================== */
+    #testimonios {
+      padding: 60px 0;
+      background-color: #fff;
+    }
+    #testimonios h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #001f3f;
+    }
+    #testimonios .testimonios-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+    }
+    #testimonios .testimonial {
+      background: #f9fbfd;
+      border-radius: 10px;
+      padding: 20px 30px;
+      position: relative;
+      font-style: italic;
+      color: #555;
+    }
+    #testimonios .testimonial::before {
+      content: "“";
+      font-size: 3rem;
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      color: #ff5722;
+    }
+    #testimonios .testimonial .author {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: right;
+      color: #001f3f;
+    }
+    
+    /* ===============================
+       Llamado a la Acción Final
+    =============================== */
+    #cta-final {
+      padding: 80px 0;
+      background: linear-gradient(135deg, #004080, #001f3f);
+      text-align: center;
+      color: #fff;
+    }
+    #cta-final h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    #cta-final .btn-cta {
+      background-color: #ff5722;
+      color: #fff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    #cta-final .btn-cta:hover {
+      background-color: #e64a19;
+    }
+    
+    /* ===============================
+       Formulario de Contacto
+    =============================== */
+    #contacto {
+      padding: 60px 0;
+      background-color: #f4f7fa;
+    }
+    #contacto h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #001f3f;
+    }
+    #contacto form {
+      max-width: 600px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    #contacto input, #contacto textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    #contacto button {
+      background-color: #004080;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    #contacto button:hover {
+      background-color: #001f3f;
+    }
+    
+    /* ===============================
+       Footer
+    =============================== */
+    footer {
+      background-color: #001f3f;
+      color: #fff;
+      padding: 20px 0;
+    }
+    footer .footer-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    footer a {
+      color: #ff5722;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover {
+      color: #e64a19;
+    }
+    
+    /* ===============================
+       Responsive Design
+    =============================== */
+    @media (max-width: 768px) {
+      #hero h1 {
+        font-size: 2rem;
+      }
+      #hero p {
+        font-size: 1rem;
+      }
+      #testimonios .testimonios-container {
+        grid-template-columns: 1fr;
+      }
+      #benefits .benefits-container {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- ===============================
+       HERO SECTION (Encabezado)
+  =============================== -->
+  <header id="hero">
+    <div class="container">
+      <h1>Gestión de documentos sin fricción.</h1>
+      <p>Edición, firma y almacenamiento en una sola plataforma.</p>
+      <button class="btn-primary" onclick="window.location.href='#contacto'">Comienza gratis</button>
+      <div class="hero-image">
+        <!-- Imagen ilustrativa de la plataforma (Placeholder) -->
+        <img src="https://via.placeholder.com/800x400.png?text=Interfaz+de+Signai" alt="Interfaz de Signai">
+      </div>
+    </div>
+  </header>
+
+  <!-- ===============================
+       BENEFICIOS CLAVE
+  =============================== -->
+  <section id="benefits">
+    <div class="container">
+      <div class="benefits-container">
+        <div class="benefit-item">
+          <i class="fas fa-lock"></i>
+          <h3>Firma Electrónica Segura</h3>
+          <p>Cumple con normativas internacionales.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-edit"></i>
+          <h3>Edición en Línea</h3>
+          <p>Modifica documentos sin salir de la plataforma.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-folder-open"></i>
+          <h3>Almacenamiento Inteligente</h3>
+          <p>Encuentra cualquier archivo en segundos.</p>
+        </div>
+        <div class="benefit-item">
+          <i class="fas fa-robot"></i>
+          <h3>Automatización con IA</h3>
+          <p>Filtrado y organización automática de documentos.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       CASOS DE USO
+  =============================== -->
+  <section id="casos-de-uso">
+    <div class="container">
+      <h2>Casos de Uso</h2>
+      <div class="casos-list">
+        <div class="caso">Empresas que gestionan contratos</div>
+        <div class="caso">Freelancers y equipos legales</div>
+        <div class="caso">Departamentos de RRHH y Finanzas</div>
+        <div class="caso">Startups que necesitan agilidad documental</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       TESTIMONIOS Y CONFIANZA
+  =============================== -->
+  <section id="testimonios">
+    <div class="container">
+      <h2>Testimonios</h2>
+      <div class="testimonios-container">
+        <div class="testimonial">
+          Signai transformó la forma en que gestionamos nuestros documentos. ¡Una revolución digital!
+          <div class="author">- Juan Pérez, CEO de Innovatech</div>
+        </div>
+        <div class="testimonial">
+          La automatización con IA es un game changer. Reducimos tiempos y aumentamos la eficiencia.
+          <div class="author">- María López, Directora Legal</div>
+        </div>
+        <div class="testimonial">
+          Seguridad, velocidad y simplicidad en una sola plataforma. ¡Recomendadísimo!
+          <div class="author">- Carlos Ramírez, Freelancer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===============================
+       LLAMADO A LA ACCIÓN FINAL
+  =============================== -->
+  <section id="cta-final">
+    <div class="container">
+      <h2>¿Listo para transformar tu gestión documental?</h2>
+      <button class="btn-cta" onclick="window.location.href='#contacto'">Prueba Gratis Ahora</button>
+    </div>
+  </section>
+
+  <!-- ===============================
+       FORMULARIO DE CONTACTO
+  =============================== -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <form action="#" method="post">
+        <input type="text" name="nombre" placeholder="Tu Nombre" required>
+        <input type="email" name="email" placeholder="Tu Email" required>
+        <textarea name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===============================
+       FOOTER
+  =============================== -->
+  <footer>
+    <div class="container footer-container">
+      <p>&copy; 2025 Signai. Todos los derechos reservados.</p>
+      <div>
+        <a href="#">Política de Privacidad</a> | 
+        <a href="#">Soporte</a> | 
+        <a href="#">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===============================
+       JAVASCRIPT INTERACTIVO
+       (Efectos de scroll suave y animaciones)
+  =============================== -->
+  <script>
+    // Efecto de scroll suave para los enlaces internos
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Aquí puedes agregar más funcionalidades JS según las necesidades futuras
+  </script>
+</body>
+</html>
