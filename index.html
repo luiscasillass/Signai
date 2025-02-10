@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Signai - Gestión Inteligente de Documentos</title>
   <meta name="description" content="Signai es una plataforma All-in-One para la gestión inteligente de documentos. Edición, firma y almacenamiento en una sola plataforma.">
+  <!-- Favicon para mostrar el logo en la pestaña del navegador -->
+  <link rel="icon" type="image/png" href="ruta/logo-pequeno.png">
+  
   <!-- Integración de Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
   <script>
@@ -13,6 +16,7 @@
     gtag('js', new Date());
     gtag('config', 'UA-XXXXXXXXX-X');
   </script>
+  
   <!-- Iconos (Font Awesome) y Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7y7eFAhHe+qgOAt/6DhmdVV3MxEd/ABiLa/" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -32,8 +36,8 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      background-color: #f4f7fa;
-      color: #333;
+      background-color: #fff; /* Fondo blanco */
+      color: #000; /* Texto negro */
     }
     a {
       text-decoration: none;
@@ -51,13 +55,30 @@
     }
     
     /* ===============================
-       Hero Section (Encabezado)
+       Navbar (con Logo)
+    =============================== */
+    nav {
+      background-color: #fff;
+      padding: 10px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    nav .nav-container {
+      display: flex;
+      align-items: center;
+    }
+    nav .logo {
+      height: 40px;
+    }
+    
+    /* ===============================
+       HERO SECTION (Encabezado)
     =============================== */
     #hero {
-      background: linear-gradient(135deg, #001f3f, #004080);
-      color: #fff;
-      padding: 100px 0;
+      background-color: #fff;
+      color: #000;
+      padding: 80px 0;
       text-align: center;
+      border-bottom: 1px solid #e0e0e0;
       position: relative;
       overflow: hidden;
     }
@@ -71,7 +92,7 @@
       margin-bottom: 40px;
     }
     .btn-primary {
-      background-color: #ff5722;
+      background-color: #004080; /* Azul que resalta */
       color: #fff;
       padding: 15px 30px;
       border: none;
@@ -81,7 +102,7 @@
       transition: background-color 0.3s ease;
     }
     .btn-primary:hover {
-      background-color: #e64a19;
+      background-color: #003060;
     }
     #hero .hero-image {
       margin-top: 40px;
@@ -96,7 +117,7 @@
     }
     
     /* ===============================
-       Beneficios Clave
+       BENEFICIOS CLAVE
     =============================== */
     #benefits {
       padding: 60px 0;
@@ -119,21 +140,21 @@
     }
     #benefits .benefit-item p {
       font-size: 1rem;
-      color: #666;
+      color: #333;
     }
     
     /* ===============================
-       Casos de Uso
+       CASOS DE USO
     =============================== */
     #casos-de-uso {
       padding: 60px 0;
-      background-color: #f9fbfd;
+      background-color: #fff;
     }
     #casos-de-uso h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 40px;
-      color: #001f3f;
+      color: #000;
     }
     #casos-de-uso .casos-list {
       display: flex;
@@ -143,11 +164,11 @@
     }
     #casos-de-uso .caso {
       background: #fff;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #004080; /* Bordes azules para direccionamiento */
       border-radius: 10px;
       padding: 20px 30px;
       font-size: 1rem;
-      color: #333;
+      color: #000;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       min-width: 200px;
     }
@@ -157,7 +178,7 @@
     }
     
     /* ===============================
-       Testimonios y Confianza
+       TESTIMONIOS Y CONFIANZA
     =============================== */
     #testimonios {
       padding: 60px 0;
@@ -167,7 +188,7 @@
       text-align: center;
       font-size: 2rem;
       margin-bottom: 40px;
-      color: #001f3f;
+      color: #000;
     }
     #testimonios .testimonios-container {
       display: grid;
@@ -176,6 +197,7 @@
     }
     #testimonios .testimonial {
       background: #f9fbfd;
+      border: 1px solid #004080;
       border-radius: 10px;
       padding: 20px 30px;
       position: relative;
@@ -188,30 +210,33 @@
       position: absolute;
       top: -20px;
       left: 20px;
-      color: #ff5722;
+      color: #004080;
     }
     #testimonios .testimonial .author {
       margin-top: 15px;
       font-weight: bold;
       text-align: right;
-      color: #001f3f;
+      color: #000;
     }
     
     /* ===============================
-       Llamado a la Acción Final
+       LLAMADO A LA ACCIÓN FINAL
     =============================== */
     #cta-final {
       padding: 80px 0;
-      background: linear-gradient(135deg, #004080, #001f3f);
+      background-color: #fff;
       text-align: center;
-      color: #fff;
+      color: #000;
+      border: 1px solid #004080;
+      border-radius: 10px;
+      margin: 40px 0;
     }
     #cta-final h2 {
       font-size: 2rem;
       margin-bottom: 20px;
     }
     #cta-final .btn-cta {
-      background-color: #ff5722;
+      background-color: #004080;
       color: #fff;
       padding: 15px 30px;
       border: none;
@@ -221,21 +246,21 @@
       transition: background-color 0.3s ease;
     }
     #cta-final .btn-cta:hover {
-      background-color: #e64a19;
+      background-color: #003060;
     }
     
     /* ===============================
-       Formulario de Contacto
+       FORMULARIO DE CONTACTO
     =============================== */
     #contacto {
       padding: 60px 0;
-      background-color: #f4f7fa;
+      background-color: #fff;
     }
     #contacto h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 20px;
-      color: #001f3f;
+      color: #000;
     }
     #contacto form {
       max-width: 600px;
@@ -261,16 +286,17 @@
       transition: background-color 0.3s ease;
     }
     #contacto button:hover {
-      background-color: #001f3f;
+      background-color: #003060;
     }
     
     /* ===============================
-       Footer
+       FOOTER
     =============================== */
     footer {
-      background-color: #001f3f;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       padding: 20px 0;
+      border-top: 1px solid #e0e0e0;
     }
     footer .footer-container {
       display: flex;
@@ -279,12 +305,12 @@
       gap: 10px;
     }
     footer a {
-      color: #ff5722;
+      color: #004080;
       font-size: 0.9rem;
       transition: color 0.3s ease;
     }
     footer a:hover {
-      color: #e64a19;
+      color: #003060;
     }
     
     /* ===============================
@@ -307,6 +333,17 @@
   </style>
 </head>
 <body>
+  <!-- ===============================
+       NAVBAR (con Logo)
+  =============================== -->
+  <nav>
+    <div class="container nav-container">
+      <a href="#">
+        <img src="ruta/logo.png" alt="Logo de la Empresa" class="logo">
+      </a>
+    </div>
+  </nav>
+  
   <!-- ===============================
        HERO SECTION (Encabezado)
   =============================== -->
@@ -444,8 +481,6 @@
         }
       });
     });
-
-    // Aquí puedes agregar más funcionalidades JS según las necesidades futuras
   </script>
 </body>
 </html>
