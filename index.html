@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Signai - Gestión Inteligente de Documentos</title>
-  <meta name="description" content="Signai es una plataforma All-in-One para la gestión inteligente de documentos. Edición, firma y almacenamiento en una sola plataforma.">
-  <!-- Favicon para mostrar el logo en la pestaña del navegador -->
+  <title>Signai - Gestión Documental Simplificada</title>
+  <meta name="description" content="Signai es la plataforma All-in-One para editar, firmar y almacenar documentos de forma sencilla y segura.">
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="logo.sfondoW.png">
   
-  <!-- Integración de Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -17,7 +17,7 @@
     gtag('config', 'UA-XXXXXXXXX-X');
   </script>
   
-  <!-- Iconos (Font Awesome) y Google Fonts -->
+  <!-- Iconos y Google Fonts -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7y7eFAhHe+qgOAt/6DhmdVV3MxEd/ABiLa/" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   
@@ -36,8 +36,8 @@
     body {
       font-family: 'Roboto', sans-serif;
       line-height: 1.6;
-      background-color: #fff; /* Fondo blanco */
-      color: #000; /* Texto negro */
+      background-color: #fff;
+      color: #000;
     }
     a {
       text-decoration: none;
@@ -47,6 +47,7 @@
       max-width: 100%;
       height: auto;
     }
+    
     /* Contenedor Principal */
     .container {
       width: 90%;
@@ -55,225 +56,198 @@
     }
     
     /* ===============================
-   NAVBAR (con Login y Signup)
-=============================== */
-nav {
-    background-color: #fff;
-    padding: 15px 0;
-    border-bottom: 1px solid #e0e0e0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo-container {
-    display: flex;
-    align-items: center;
-}
-
-.logo {
-    height: 40px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px;
-}
-
-/* Dropdown Login & Signup */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropbtn {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    color: #004080;
-    cursor: pointer;
-    font-weight: bold;
-    padding: 10px;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-    min-width: 180px;
-    right: 0;
-    z-index: 10;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 10px 15px;
-    text-decoration: none;
-    display: block;
-    transition: background 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background: #f1f1f1;
-}
-
-/* Mostrar dropdown cuando se pasa el mouse */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
+       NAVBAR
+    =============================== */
+    nav {
+      background-color: #fff;
+      padding: 15px 0;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    /* Ajustamos el contenedor del navbar para que ocupe el 100% y tenga padding lateral */
+    .nav-container {
+      width: 100%;
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    /* Logo y texto */
+    .logo-container {
+      display: flex;
+      align-items: center;
+    }
+    .logo {
+      height: 40px;
+    }
+    .logo-text {
+      font-family: "Avenir", sans-serif;
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-left: 10px;
+      color: #000;
+    }
     .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    /* Dropdown Login & Signup */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      background: none;
+      border: none;
+      font-size: 1rem;
+      color: #004080;
+      cursor: pointer;
+      font-weight: bold;
+      padding: 10px;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      min-width: 180px;
+      right: 0;
+      z-index: 10;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.3s ease;
+    }
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .nav-links {
         flex-direction: column;
         gap: 10px;
+      }
     }
-}
-
     
     /* ===============================
-   HERO SECTION con Video de Fondo
-=============================== */
-#hero {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-
-/* Video de fondo */
-.hero-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* Overlay oscuro para mejorar la legibilidad */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Ajusta la opacidad si es necesario */
-    z-index: 0;
-}
-
-/* Contenido del Hero (Texto y Botón) */
-.hero-content {
-    position: relative;
-    z-index: 1;
-    color: white;
-    text-align: center;
-    padding: 50px;
-}
-
-.hero-content h1 {
-    font-size: 3rem;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-.hero-content p {
-    font-size: 1.5rem;
-    margin-bottom: 30px;
-}
-
-.btn-primary {
-    background-color: #004080; /* Azul corporativo */
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-primary:hover {
-    background-color: #003060;
-}
-
-/* Responsive para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-    .hero-content p {
-        font-size: 1.2rem;
-    }
-}
-
-    
-    /* ===============================
-       BENEFICIOS CLAVE
+       HERO SECTION
     =============================== */
-    #benefits {
-      padding: 60px 0;
-      background-color: #fff;
-    }
-    #benefits .benefits-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 40px;
+    #hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    #benefits .benefit-item i {
-      font-size: 2.5rem;
-      color: #004080;
-      margin-bottom: 15px;
+    .hero-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
-    #benefits .benefit-item h3 {
+    .hero-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 0;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      color: white;
+      text-align: center;
+      padding: 50px;
+    }
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+    .btn-primary {
+      background-color: #004080;
+      color: white;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
       font-size: 1.2rem;
-      margin-bottom: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
-    #benefits .benefit-item p {
-      font-size: 1rem;
-      color: #333;
+    .btn-primary:hover {
+      background-color: #003060;
+    }
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+      }
     }
     
     /* ===============================
-       CASOS DE USO
+       SECCIONES
     =============================== */
-    #casos-de-uso {
+    section {
       padding: 60px 0;
       background-color: #fff;
     }
-    #casos-de-uso h2 {
+    section h2 {
       text-align: center;
       font-size: 2rem;
       margin-bottom: 40px;
       color: #000;
     }
-    #casos-de-uso .casos-list {
+    
+    /* BENEFICIOS */
+    .benefits-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .benefit-item i {
+      font-size: 2.5rem;
+      color: #004080;
+      margin-bottom: 15px;
+    }
+    .benefit-item h3 {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    .benefit-item p {
+      font-size: 1rem;
+      color: #333;
+    }
+    
+    /* CASOS DE USO */
+    .casos-list {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
     }
-    #casos-de-uso .caso {
+    .caso {
       background: #fff;
-      border: 1px solid #004080; /* Bordes azules para direccionamiento */
+      border: 1px solid #004080;
       border-radius: 10px;
       padding: 20px 30px;
       font-size: 1rem;
@@ -281,30 +255,18 @@ nav {
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       min-width: 200px;
     }
-    #casos-de-uso .caso:hover {
+    .caso:hover {
       transform: translateY(-5px);
       box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     }
     
-    /* ===============================
-       TESTIMONIOS Y CONFIANZA
-    =============================== */
-    #testimonios {
-      padding: 60px 0;
-      background-color: #fff;
-    }
-    #testimonios h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 40px;
-      color: #000;
-    }
-    #testimonios .testimonios-container {
+    /* TESTIMONIOS */
+    .testimonios-container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 40px;
     }
-    #testimonios .testimonial {
+    .testimonial {
       background: #f9fbfd;
       border: 1px solid #004080;
       border-radius: 10px;
@@ -313,7 +275,7 @@ nav {
       font-style: italic;
       color: #555;
     }
-    #testimonios .testimonial::before {
+    .testimonial::before {
       content: "“";
       font-size: 3rem;
       position: absolute;
@@ -321,16 +283,14 @@ nav {
       left: 20px;
       color: #004080;
     }
-    #testimonios .testimonial .author {
+    .testimonial .author {
       margin-top: 15px;
       font-weight: bold;
       text-align: right;
       color: #000;
     }
     
-    /* ===============================
-       LLAMADO A LA ACCIÓN FINAL
-    =============================== */
+    /* CTA FINAL */
     #cta-final {
       padding: 80px 0;
       background-color: #fff;
@@ -344,7 +304,7 @@ nav {
       font-size: 2rem;
       margin-bottom: 20px;
     }
-    #cta-final .btn-cta {
+    .btn-cta {
       background-color: #004080;
       color: #fff;
       padding: 15px 30px;
@@ -354,23 +314,11 @@ nav {
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
-    #cta-final .btn-cta:hover {
+    .btn-cta:hover {
       background-color: #003060;
     }
     
-    /* ===============================
-       FORMULARIO DE CONTACTO
-    =============================== */
-    #contacto {
-      padding: 60px 0;
-      background-color: #fff;
-    }
-    #contacto h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 20px;
-      color: #000;
-    }
+    /* CONTACTO */
     #contacto form {
       max-width: 600px;
       margin: 0 auto;
@@ -398,16 +346,14 @@ nav {
       background-color: #003060;
     }
     
-    /* ===============================
-       FOOTER
-    =============================== */
+    /* FOOTER */
     footer {
       background-color: #fff;
       color: #000;
       padding: 20px 0;
       border-top: 1px solid #e0e0e0;
     }
-    footer .footer-container {
+    .footer-container {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -422,9 +368,7 @@ nav {
       color: #003060;
     }
     
-    /* ===============================
-       Responsive Design
-    =============================== */
+    /* Responsive */
     @media (max-width: 768px) {
       #hero h1 {
         font-size: 2rem;
@@ -432,92 +376,88 @@ nav {
       #hero p {
         font-size: 1rem;
       }
-      #testimonios .testimonios-container {
+      .testimonios-container {
         grid-template-columns: 1fr;
       }
-      #benefits .benefits-container {
+      .benefits-container {
         grid-template-columns: 1fr 1fr;
       }
     }
   </style>
 </head>
 <body>
-    <!-- ===============================
-       NAVBAR (con Logo y Login/Signup)
+  <!-- ===============================
+       NAVBAR
   =============================== -->
   <nav>
-    <div class="container nav-container">
+    <div class="nav-container">
       <a href="#" class="logo-container">
         <img src="logo.sfondoW.png" alt="Logo de Signai" class="logo">
+        <span class="logo-text">Signai</span>
       </a>
       <div class="nav-links">
         <div class="dropdown">
           <button class="dropbtn">Ingresar</button>
           <div class="dropdown-content">
+            <a href="#">Inicia sesión</a>
           </div>
         </div>
         <div class="dropdown">
           <button class="dropbtn">Crear cuenta</button>
           <div class="dropdown-content">
+            <a href="#">Regístrate</a>
           </div>
         </div>
       </div>
     </div>
   </nav>
-
   
-   <!-- ===============================
-       HERO SECTION (Encabezado con Video de Fondo)
+  <!-- ===============================
+       HERO SECTION
   =============================== -->
   <header id="hero">
-    <!-- Video de fondo -->
     <video autoplay loop muted playsinline class="hero-video">
       <source src="Signai.video1.mp4" type="video/mp4">
       Tu navegador no soporta la reproducción de videos.
     </video>
-
-    <!-- Capa de oscurecimiento para mejorar la legibilidad -->
     <div class="hero-overlay"></div>
-
-    <!-- Contenido principal -->
     <div class="hero-content container">
-      <h1>Gestión de documentos sin fricción.</h1>
-      <p>Edición, firma y almacenamiento en una sola plataforma.</p>
-      <button class="btn-primary" onclick="window.location.href='#contacto'">Comienza a firmar gratis</button>
+      <h1>Firma tus documentos sin fricción.</h1>
+      <p>La forma sencilla y segura de editar, firmar y almacenar tus archivos.</p>
+      <button class="btn-primary" onclick="window.location.href='#contacto'">Empieza Gratis</button>
     </div>
   </header>
-
-
+  
   <!-- ===============================
-       BENEFICIOS CLAVE
+       BENEFICIOS
   =============================== -->
   <section id="benefits">
     <div class="container">
       <div class="benefits-container">
         <div class="benefit-item">
           <i class="fas fa-lock"></i>
-          <h3>Firma Electrónica Segura</h3>
-          <p>Cumple con normativas internacionales.</p>
+          <h3>Firma Electrónica</h3>
+          <p>Seguridad y cumplimiento garantizado.</p>
         </div>
         <div class="benefit-item">
           <i class="fas fa-edit"></i>
           <h3>Edición en Línea</h3>
-          <p>Modifica documentos sin salir de la plataforma.</p>
+          <p>Modifica tus documentos al instante.</p>
         </div>
         <div class="benefit-item">
           <i class="fas fa-folder-open"></i>
           <h3>Almacenamiento Inteligente</h3>
-          <p>Encuentra cualquier archivo en segundos.</p>
+          <p>Encuentra lo que buscas en segundos.</p>
         </div>
         <div class="benefit-item">
           <i class="fas fa-robot"></i>
           <h3>Automatización con IA</h3>
-          <p>Filtrado y organización automática de documentos.</p>
+          <p>Organiza y filtra con inteligencia.</p>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- ===============================
        CASOS DE USO
   =============================== -->
@@ -525,49 +465,49 @@ nav {
     <div class="container">
       <h2>Casos de Uso</h2>
       <div class="casos-list">
-        <div class="caso">Empresas que gestionan contratos</div>
-        <div class="caso">Freelancers y equipos legales</div>
-        <div class="caso">Departamentos de RRHH y Finanzas</div>
-        <div class="caso">Startups que necesitan agilidad documental</div>
+        <div class="caso">Empresas que optimizan procesos</div>
+        <div class="caso">Freelancers buscando eficiencia</div>
+        <div class="caso">Equipos legales en acción</div>
+        <div class="caso">Startups en constante evolución</div>
       </div>
     </div>
   </section>
-
+  
   <!-- ===============================
-       TESTIMONIOS Y CONFIANZA
+       TESTIMONIOS
   =============================== -->
   <section id="testimonios">
     <div class="container">
       <h2>Testimonios</h2>
       <div class="testimonios-container">
         <div class="testimonial">
-          Signai transformó la forma en que gestionamos nuestros documentos. ¡Una revolución digital!
+          Signai revolucionó nuestra gestión documental. ¡Simplemente imprescindible!
           <div class="author">- Juan Pérez, CEO de Innovatech</div>
         </div>
         <div class="testimonial">
-          La automatización con IA es un game changer. Reducimos tiempos y aumentamos la eficiencia.
+          La integración de IA es pura magia. Ahorro de tiempo y más.
           <div class="author">- María López, Directora Legal</div>
         </div>
         <div class="testimonial">
-          Seguridad, velocidad y simplicidad en una sola plataforma. ¡Recomendadísimo!
+          Seguridad, rapidez y simplicidad en un solo lugar. ¡La recomiendo sin dudar!
           <div class="author">- Carlos Ramírez, Freelancer</div>
         </div>
       </div>
     </div>
   </section>
-
+  
   <!-- ===============================
        LLAMADO A LA ACCIÓN FINAL
   =============================== -->
   <section id="cta-final">
     <div class="container">
-      <h2>¿Listo para transformar tu gestión documental?</h2>
-      <button class="btn-cta" onclick="window.location.href='#contacto'">Prueba Gratis Ahora</button>
+      <h2>Transforma tu gestión documental hoy</h2>
+      <button class="btn-cta" onclick="window.location.href='#contacto'">Descúbrelo Ahora</button>
     </div>
   </section>
-
+  
   <!-- ===============================
-       FORMULARIO DE CONTACTO
+       CONTACTO
   =============================== -->
   <section id="contacto">
     <div class="container">
@@ -580,7 +520,7 @@ nav {
       </form>
     </div>
   </section>
-
+  
   <!-- ===============================
        FOOTER
   =============================== -->
@@ -594,13 +534,12 @@ nav {
       </div>
     </div>
   </footer>
-
+  
   <!-- ===============================
        JAVASCRIPT INTERACTIVO
-       (Efectos de scroll suave y animaciones)
   =============================== -->
   <script>
-    // Efecto de scroll suave para los enlaces internos
+    // Scroll suave para enlaces internos
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
