@@ -55,20 +55,93 @@
     }
     
     /* ===============================
-       Navbar (con Logo)
-    =============================== */
-    nav {
-      background-color: #fff;
-      padding: 10px 0;
-      border-bottom: 1px solid #e0e0e0;
+   NAVBAR (con Login y Signup)
+=============================== */
+nav {
+    background-color: #fff;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* Dropdown Login & Signup */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #004080;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    min-width: 180px;
+    right: 0;
+    z-index: 10;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background: #f1f1f1;
+}
+
+/* Mostrar dropdown cuando se pasa el mouse */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
     }
-    nav .nav-container {
-      display: flex;
-      align-items: center;
-    }
-    nav .logo {
-      height: 40px;
-    }
+}
+
     
     /* ===============================
    HERO SECTION con Video de Fondo
@@ -369,16 +442,29 @@
   </style>
 </head>
 <body>
-  <!-- ===============================
-       NAVBAR (con Logo)
+    <!-- ===============================
+       NAVBAR (con Logo y Login/Signup)
   =============================== -->
   <nav>
     <div class="container nav-container">
-      <a href="#">
-        <img src="logo.sfondoW.png" alt="Logo de la Empresa" class="logo">
+      <a href="#" class="logo-container">
+        <img src="logo.sfondoW.png" alt="Logo de Signai" class="logo">
       </a>
+      <div class="nav-links">
+        <div class="dropdown">
+          <button class="dropbtn">Ingresar</button>
+          <div class="dropdown-content">
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">Crear cuenta</button>
+          <div class="dropdown-content">
+          </div>
+        </div>
+      </div>
     </div>
   </nav>
+
   
    <!-- ===============================
        HERO SECTION (Encabezado con Video de Fondo)
