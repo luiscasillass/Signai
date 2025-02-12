@@ -298,11 +298,31 @@
       border-radius: 50px;
       font-size: 1rem;
       cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-    .btn-cta:hover {
-      background-color: #003060;
-    }
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #004080; /* Azul corporativo */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: #003060;
+    transform: scale(1.05);
+}
+
     
     /* CONTACTO */
     #contacto form {
